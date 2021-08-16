@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Piano</title>
+    <script src='piano.js' defer></script>
+</head>
+<body>
+
+    <div class="nav navbar">
+
+        <p class="title logo">Virtual Piano</p>
+
+    </div>
+
+    <div class="section piano">
+        <div class="piano whiteKeys">
+
+            <div class="whiteKey keyC" id='keyC'>
+                <p class="keyName keyNameC">C</p>
+            </div>            
+
+            <div class="whiteKey keyD" id='keyD'>
+                <p class=" keyName keyNameD">D</p>        
+            </div>
+
+            <div class="whiteKey keyE" id='keyE'>
+                <p class=" keyName keyNameD">E</p>
+            </div>
+
+            <div class="whiteKey keyF" id='keyF'>
+                <p class="keyName keyNameF">F</p>
+            </div>
+
+            <div class="whiteKey keyG" id='keyG'>
+                <p class="keyName keyNameG">G</p>
+            </div>
+
+            <div class="whiteKey keyA" id='keyA'>
+                <p class="keyName keyNameA">A</p>
+            </div>
+
+            <div class="whiteKey keyB" id='keyB'>
+                <p class="keyName keyNameB">B</p>
+            </div>
+        </div>
+
+        <div class="piano blackKeys">
+
+            <div class="blackKey keyCSharp" id='cSharp'></div>
+            <div class="blackKey keyDSharp" id='dSharp'></div>
+            <div class="blackKey keyESharp" id='eSharp'></div>
+            <div class="blackKey keyFsharp" id='fSharp'></div>
+            <div class="blackKey keyGSharp" id='gSharp'></div>
+            <div class="blackKey keyASharp" id='aSharp'></div>
+
+        </div>
+
+    </div>
+
+    <div class="section buttons">
+        <button class='audiobutton recordbutton' id='button--record'>Record</button>
+        <button class='audiobutton playbutton' id='button--play'>Play</button>
+    </div>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{background-color: rgb(32, 32, 32);}
+
+        .nav{
+            height: 3rem; 
+            background-color: rgb(25, 51, 75);
+            color: white;
+            line-height: 3rem;
+            padding: 0px 0px 0px 20px;
+        }
+
+        .title{
+            font-size:20px;
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        .section{
+            display: flex;
+            align-items: center;
+            margin: auto;
+            /* background-color:rgba(192, 192, 192, 0.877); */
+            justify-content: center;
+            margin-top: 3rem;
+            padding: 50px;
+            padding-left: 21rem;
+        }
+
+        .piano{
+            display: flex;
+        }
+
+        .whiteKey{
+            height: 18rem;
+            width: 3rem;
+            background-color:white;
+            border: 0.1px solid black;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 0.07rem;
+        }
+
+        .blackKey{
+            height: 14.2rem;
+            background-color:black;
+            width: 1.7rem;
+            position: relative;
+            right: 20.25rem;
+            bottom: 1.95rem;
+            border-radius: 2px;
+            margin-right: 25px;
+            cursor: pointer;
+            box-shadow:4px 2px 20px 2px rgb(49, 49, 49) inset;
+            /* border: 1px solid black; */
+        }
+
+        .keyName{
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 13.3px;
+            padding-top: 20px;
+        }
+
+        .keyNameC {
+            padding-left: 10px;
+        }
+        .keyNameB {
+            padding-left: 23px;
+        }
+
+        .keyNameD{
+            padding-right: 50px;
+        }
+
+        .keyESharp{
+            height: 0px;
+        }
+        
+        .audiobutton{
+            height: 2.3rem;
+            width: 5rem;
+            margin-left: 1rem;
+            background-color: rgb(225, 225, 225);
+            border: 1px solid black;
+            border-radius: 1px;
+            align-items: center;
+            position: relative;
+            bottom: 7rem;
+            right: 15.99rem;
+            cursor: pointer;
+        }
+        .recordbutton{}
+        .playbutton{}
+
+    </style>
+
+
+</body>
+</html>
